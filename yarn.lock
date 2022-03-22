@@ -83,6 +83,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@matejmazur/react-katex@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "@matejmazur/react-katex@npm:3.1.3"
+  peerDependencies:
+    katex: ">=0.9"
+    react: ">=16"
+  checksum: db9e9aa03d3b094fcb9854abeab3676732b04dbe4fbfe2dbf26782a6d50c197351d06ad833c78b90f7e418d769b77c30460a60906e80e800d84e16c938f3d6d1
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:12.1.0":
   version: 12.1.0
   resolution: "@next/env@npm:12.1.0"
@@ -1535,6 +1545,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"katex@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "katex@npm:0.9.0"
+  dependencies:
+    match-at: ^0.1.1
+  bin:
+    katex: cli.js
+  checksum: 5be41cf3c2cbd89ca03d993a8060e08a594ebe8d447c03010becbf35f9226d3acd306820e0361cb0b9cfd4fa2ea07efed5096e49bf66f3e586318d47a894d0d1
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -1614,6 +1635,13 @@ __metadata:
     socks-proxy-agent: ^6.1.1
     ssri: ^8.0.1
   checksum: cf3e745567f114bf161e13dbde402cff916482930936c102543b5c6e5e6409921b05d38d6400c92ed0b43011b185c8f39a9f504c9a1bdb956eeeed39929451a6
+  languageName: node
+  linkType: hard
+
+"match-at@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "match-at@npm:0.1.1"
+  checksum: ff2836878441322024824ec46c45b40ae8684e19b1a0ee676a398b62db42ec4b7ab32f4b14fb0f1918c130b7b659457293f23c448d9187b7e77a2b5c3ec7ace0
   languageName: node
   linkType: hard
 
@@ -2017,6 +2045,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "physics@workspace:."
   dependencies:
+    "@matejmazur/react-katex": ^3.1.3
     "@types/eslint": ^8
     "@types/node": ^17.0.22
     "@types/prettier": ^2
@@ -2028,8 +2057,11 @@ __metadata:
     next: ^12.1.0
     postcss: ^8.4.12
     prettier: ^2.6.0
+    prettier-plugin-tailwindcss: ^0.1.8
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-hook-form: ^7.28.1
+    react-katex: ^2.0.2
     react-use: ^17.3.2
     tailwindcss: ^3.0.23
     typescript: ^4.6.2
@@ -2133,6 +2165,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier-plugin-tailwindcss@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "prettier-plugin-tailwindcss@npm:0.1.8"
+  peerDependencies:
+    prettier: ">=2.2.0"
+  checksum: b183f061dfd07dd6faee5244c1d1f9efe39ec58b4b8382bb6de379e2a831484bd9b59baca1cb58b46872de40c63d7958cdb2adc953706019b0929843b3406228
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^2.6.0":
   version: 2.6.0
   resolution: "prettier@npm:2.6.0"
@@ -2190,6 +2231,27 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.28.1":
+  version: 7.28.1
+  resolution: "react-hook-form@npm:7.28.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17
+  checksum: 176e653f3c5c1882125b6d51d3b2258c7120202227b91edbf74708eb3f0d455b3c827f1b6c236cdf208de82871b14e86d9aeacbd44c418bcf591b2346721156f
+  languageName: node
+  linkType: hard
+
+"react-katex@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "react-katex@npm:2.0.2"
+  dependencies:
+    katex: ^0.9.0
+  peerDependencies:
+    prop-types: ^15.5.10
+    react: ^15.3.2 || ^16.0.0
+  checksum: adb28dba77f4304b3d9a9b5c53d53949b97694df79e0aa095a614cf412eceffc91d79ec69558fb1918af2bccac06a3344e364d9816fa6ed33619386f6e7b5623
   languageName: node
   linkType: hard
 

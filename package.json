@@ -1,0 +1,29 @@
+{
+  "name": "physics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/neetlab/physics.git",
+  "author": "Ryo Igarashi <n33t5hin@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "clsx": "^1.1.1",
+    "next": "^12.1.0",
+    "postcss": "^8.4.12",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-use": "^17.3.2",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "^17.0.22",
+    "@types/prettier": "^2",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "eslint": "^8.11.0",
+    "prettier": "^2.6.0"
+  }
+}

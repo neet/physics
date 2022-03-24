@@ -33,6 +33,7 @@ const deriveLsFromY1 = (y1: number) => {
     objectToMovablePulley,
     movablePulleyToCeil: rest / 2 + initialMovablePulleyToCeil,
     movablePulleyToFixedPulley: rest / 2,
+    isStopped: rest === 0,
   };
 };
 
@@ -69,7 +70,7 @@ const MovablePulley = () => {
     (4 * objectMass + pulleyMass)
   );
 
-  const [y1_] = useAcceleration(0, -a, initialObjectPos);
+  const [y1_, v] = useAcceleration(0, -a, initialObjectPos);
 
   const y1 = Math.max(y1_, -500);
   const params = deriveLsFromY1(y1);
@@ -77,39 +78,59 @@ const MovablePulley = () => {
 
   return (
     <div>
-      <form className="absolute bottom-0 right-0 border border-gray-500 p-8">
-        <label className="block">
-          <Decoration>{"$g$"}</Decoration>
-          <input
-            type="number"
-            className="border-b border-gray-300 text-right"
-            value={g}
-            onChange={(e) => setG(Number(e.target.value))}
-          />
-          <Decoration>{"$\\text{px}/\\text{s}^2$"}</Decoration>
-        </label>
+      <div className="absolute bottom-0 right-0 border border-gray-500 p-8">
+        <form>
+          <label className="block">
+            <Decoration>{"$g$"}</Decoration>
+            <input
+              type="number"
+              className="border-b border-gray-300 text-right"
+              value={g}
+              onChange={(e) => setG(Number(e.target.value))}
+            />
+            <Decoration>{"$\\text{px}/\\text{s}^2$"}</Decoration>
+          </label>
 
-        <label className="block">
-          <Decoration>{"$m$"}</Decoration>
-          <input
-            {...register("objectMass")}
-            type="number"
-            className="border-b border-gray-300 text-right"
-          />
-          <Decoration>{"$\\text{g}$"}</Decoration>
-        </label>
+          <label className="block">
+            <Decoration>{"$m$"}</Decoration>
+            <input
+              {...register("objectMass")}
+              type="number"
+              className="border-b border-gray-300 text-right"
+            />
+            <Decoration>{"$\\text{g}$"}</Decoration>
+          </label>
 
-        <label className="block">
-          <Decoration>{"$M$"}</Decoration>
-          <input
-            {...register("pulleyMass")}
-            type="number"
-            className="border-b border-gray-300 text-right"
-          />
+          <label className="block">
+            <Decoration>{"$M$"}</Decoration>
+            <input
+              {...register("pulleyMass")}
+              type="number"
+              className="border-b border-gray-300 text-right"
+            />
 
-          <Decoration>{"$\\text{g}$"}</Decoration>
-        </label>
-      </form>
+            <Decoration>{"$\\text{g}$"}</Decoration>
+          </label>
+        </form>
+
+        <div className="mt-8">
+          <Decoration>
+            {"$a = " + a.toPrecision(3) + " \\text{px}/\\text{s}^2$"}
+          </Decoration>
+          <br />
+          <Decoration>
+            {"$|\\bm{v_A}| = " +
+              (params.isStopped ? 0 : v).toPrecision(3) +
+              " \\text{px}$"}
+          </Decoration>
+          <br />
+          <Decoration>
+            {"$y_A = " +
+              params.objectToMovablePulley.toPrecision(3) +
+              " \\text{px}$"}
+          </Decoration>
+        </div>
+      </div>
 
       <Ceil>
         <Line x={100} height={TO_CEIL} />

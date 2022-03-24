@@ -33,7 +33,7 @@ const deriveLsFromY1 = (y1: number) => {
     objectToMovablePulley,
     movablePulleyToCeil: rest / 2 + initialMovablePulleyToCeil,
     movablePulleyToFixedPulley: rest / 2,
-    isStopped: rest === 0,
+    hasStopped: rest === 0,
   };
 };
 
@@ -78,7 +78,7 @@ const MovablePulley = () => {
 
   return (
     <div>
-      <div className="absolute bottom-0 right-0 border border-gray-500 p-8">
+      <div className="absolute top-0 right-0 border border-gray-500 bg-white p-8">
         <form>
           <label className="block">
             <Decoration>{"$g$"}</Decoration>
@@ -120,7 +120,7 @@ const MovablePulley = () => {
           <br />
           <Decoration>
             {"$|\\bm{v_A}| = " +
-              (params.isStopped ? 0 : v).toPrecision(3) +
+              (params.hasStopped ? 0 : v).toPrecision(3) +
               " \\text{px}$"}
           </Decoration>
           <br />

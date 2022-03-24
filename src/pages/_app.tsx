@@ -10,7 +10,7 @@ const App = (props: AppProps): JSX.Element => {
 
   return (
     <TimeProvider>
-      <GravitationalFieldProvider acceleration={100}>
+      <GravitationalFieldProvider acceleration={50}>
         <Component {...pageProps} />
       </GravitationalFieldProvider>
     </TimeProvider>

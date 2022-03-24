@@ -33,7 +33,7 @@ const deriveLsFromY1 = (y1: number) => {
     objectToMovablePulley,
     movablePulleyToCeil: rest / 2 + initialMovablePulleyToCeil,
     movablePulleyToFixedPulley: rest / 2,
-    hasStopped: rest === 0,
+    hasStopped: (rest === 0) || (rest === freeRange),
   };
 };
 

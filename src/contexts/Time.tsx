@@ -4,6 +4,7 @@ import {
   useContext,
   useState,
   useCallback,
+  useLayoutEffect,
 } from "react";
 import { useRafLoop } from "react-use";
 
@@ -26,7 +27,7 @@ export interface TimeProviderProps {
 
 export const TimeProvider = (props: TimeProviderProps) => {
   const { children } = props;
-  const [time, setValue] = useState(performance.now() / 1000);
+  const [time, setValue] = useState(0);
   const [base, setBase] = useState(0);
 
   useRafLoop((t) => {

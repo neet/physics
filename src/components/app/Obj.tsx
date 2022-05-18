@@ -15,6 +15,7 @@ export interface ObjProps {
   readonly weightLabel?: string;
 
   readonly showWeight?: boolean;
+  readonly className?: string;
 }
 
 export const Obj = (props: ObjProps) => {
@@ -28,10 +29,11 @@ export const Obj = (props: ObjProps) => {
     weightLabel,
     showWeight = false,
     shape,
+    className,
   } = props;
 
   return (
-    <Box shape={shape} height={height} width={width} x={x} y={y}>
+    <Box className={className} shape={shape} height={height} width={width} x={x} y={y}>
       {weightLabel && <Decoration>{`\$${weightLabel}\$`}</Decoration>}
 
       {showWeight && (

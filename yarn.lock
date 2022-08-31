@@ -3448,6 +3448,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/color-hash@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@types/color-hash@npm:1.0.2"
+  checksum: 09c8acbe313ec809922bcc9a957720479874a905fd997ff2628f361eb54e72082973066845b92fc733e069f8314ab509403419332a74ddbdf8bad8bde7d1d32f
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.3":
   version: 3.7.4
   resolution: "@types/eslint-scope@npm:3.7.4"
@@ -5820,6 +5827,13 @@ __metadata:
   dependencies:
     color-name: ~1.1.4
   checksum: 79e6bdb9fd479a205c71d89574fccfb22bd9053bd98c6c4d870d65c132e5e904e6034978e55b43d69fcaa7433af2016ee203ce76eeba9cfa554b373e7f7db336
+  languageName: node
+  linkType: hard
+
+"color-hash@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "color-hash@npm:2.0.1"
+  checksum: 7e4726ded37088e9d05bb290f7cffa946f09b73986af2f06c1624b622aebb6cd266aa84a7aa9824819470820e2aa9a011b8347eac8cb748e710c8337b3ebdb57
   languageName: node
   linkType: hard
 
@@ -11669,6 +11683,7 @@ __metadata:
     "@storybook/react": ^6.5.10
     "@storybook/react-docgen-typescript-plugin": ^1.0.1
     "@storybook/theming": ^6.5.10
+    "@types/color-hash": ^1.0.2
     "@types/eslint": ^8
     "@types/node": ^17.0.22
     "@types/prettier": ^2
@@ -11676,6 +11691,7 @@ __metadata:
     "@types/react-dom": ^17
     autoprefixer: ^10.4.4
     clsx: ^1.1.1
+    color-hash: ^2.0.1
     eslint: ^8.11.0
     next: ^12.1.0
     postcss: ^8.4.12

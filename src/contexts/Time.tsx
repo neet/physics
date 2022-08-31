@@ -4,7 +4,6 @@ import {
   useContext,
   useState,
   useCallback,
-  useLayoutEffect,
 } from "react";
 import { useRafLoop } from "react-use";
 

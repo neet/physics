@@ -1,6 +1,6 @@
-type Base<T> = {
+interface Base<T> {
   readonly type: T;
-};
+}
 
 export type Tex = Base<"tex"> & {
   readonly value: string;
@@ -10,7 +10,7 @@ export type PlainText = Base<"plaintext"> & {
   readonly value: string;
 };
 
-export type Token = Tex | PlainText;
+export type Token = PlainText | Tex;
 
 const TEX_PATTEN = /\$([^$]+?)\$/g;
 

@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/prefer-readonly-parameter-types */
 import clsx from "clsx";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export interface CeilProps {
   readonly children?: ReactNode;
   readonly className?: string;
 }
 
-export const Ceil = (props: CeilProps) => {
-  const { children, className } = props;
+export const Ceil = (props: CeilProps): JSX.Element => {
+  const { children } = props;
 
   return (
     <div className="w-full">

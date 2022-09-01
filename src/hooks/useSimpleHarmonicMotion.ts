@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+export type UseSimpleHarmonicMotionResult = [x: number, v: number, a: number];
+
 export const useSimpleHarmonicMotion = (
   omega: number,
   amp: number,
   phi: number,
   t: number
-) => {
+): UseSimpleHarmonicMotionResult => {
   const x = amp * Math.sin(omega * t + phi);
   // ↓ dx/dt
   const v = omega * amp * Math.cos(omega * t + phi);

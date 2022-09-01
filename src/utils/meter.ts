@@ -6,4 +6,5 @@ document.body.appendChild(div);
 const centimeter = Number(getComputedStyle(div).width.replace(/px$/, ""));
 document.body.removeChild(div);
 
+// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 export const meter = centimeter * 10;

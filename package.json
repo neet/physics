@@ -7,6 +7,7 @@
   "license": "MIT",
   "packageManager": "yarn@3.2.0",
   "scripts": {
+    "test:eslint": "eslint -c .eslintrc.json ./src/**/*.ts",
     "storybook": "TAILWIND_MODE=watch start-storybook -p 9000 --no-manager-cache"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "autoprefixer": "^10.4.4",
     "clsx": "^1.1.1",
     "color-hash": "^2.0.1",
+    "immer": "^9.0.15",
     "next": "^12.1.0",
     "postcss": "^8.4.12",
     "react": "^17.0.2",
@@ -26,6 +28,7 @@
     "typescript": "^4.6.2"
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-knobs": "^6.4.0",
     "@storybook/addon-links": "^6.5.10",
@@ -40,8 +43,19 @@
     "@types/prettier": "^2",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "eslint": "^8.11.0",
+    "@types/react-redux": "^7.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.6.0",
-    "prettier-plugin-tailwindcss": "^0.1.8"
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "react-redux": "^8.0.2"
   }
 }
